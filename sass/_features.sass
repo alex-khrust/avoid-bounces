@@ -1,0 +1,52 @@
+#features
+  width: 100%
+  height: 2516px
+  background: url("../img/features-background.png")
+  //background: url("../img/features-background-trn.png") no-repeat center center / cover, linear-gradient( 38deg, rgb(82,64,172) 0%, rgb(148,103,210) 99%) !important
+  .container
+    flex-flow: column
+    align-items: center
+
+  .section-header
+    color: #ffffff
+    &:before
+      background: #ffffff
+
+  .features-list
+    width: 100%
+    min-height: 1950px
+    height: auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-content: space-between
+    color: rgb(42, 55, 64)
+
+    &__item
+      width: 100%
+      height: 300px
+      max-width: 370px
+      background-color: rgb(255, 255, 255)
+      border-radius: 20px
+      display: flex
+      flex-flow: column
+      align-items: center
+      text-align: center
+      padding: 25px 15px 0
+      box-shadow: 0 7px 43px 0 rgba(0, 0, 0, 0.11)
+      img
+        width: auto
+        height: auto
+      h3
+        font: 25px 'Bebas_Neue'
+        padding: 20px 0
+        text-transform: uppercase
+      p
+        font: 15px 'Montserrat-Regular'
+
+  .btn
+    margin: 65px auto 25px
+  .info
+    text-align: center
+    font: 15px 'Montserrat-Medium'
+    color: #ffffff

@@ -1,0 +1,97 @@
+#check
+  .container
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    padding-bottom: 120px
+
+.section-header
+  width: 100%
+  height: auto
+  display: flex
+  flex-flow: column
+  align-items: center
+  color: #2a3740
+  padding: 125px 0 55px
+  &:before
+    content: ''
+    position: absolute
+    width: 121px
+    height: 5px
+    background-color: rgb(141, 99, 206)
+    border-radius: 5px
+    top: 80px
+  h2
+    font: 50px "Bebas_Neue"
+    text-transform: uppercase
+    padding-bottom: 15px
+  p.bold
+    font: 17px 'Montserrat-SemiBold'
+    font-weight: bold
+  p
+    max-width: 610px
+    text-align: center
+    font: 17px 'Montserrat-Regular'
+
+
+#validation-checker
+  width: 100%
+  height: auto
+  display: flex
+  flex-flow: column
+  justify-content: center
+  p
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+  .validation-checker__email
+    width: 100%
+    max-width: 568px
+    height: 59px
+    border: 1px solid rgb(141, 99, 206)
+    border-radius: 50px
+    background-color: rgb(255, 255, 255)
+    padding: 25px 40px
+    font: bold 15px 'Montserrat-Regular'
+    color: #2a3740
+    &::placeholder
+      font-weight: 500
+  table
+    width: auto
+    height: auto
+    background-color: rgb(248, 246, 255)
+    border-radius: 20px
+    font: 15px 'Montserrat-Medium'
+    color: #2a3740
+    margin: 20px auto
+    //padding: 15px 0
+    th
+      text-align: left
+      padding: 10px 30px
+    td
+      text-align: right
+      padding: 10px 30px
+
+    tr:nth-child(1)
+      th, td
+        padding-top: 20px
+    tr:nth-of-type(3)
+      th, td
+        padding-bottom: 20px
+
+    th:nth-of-type(2)
+      border-left: 2px solid #ffffff
+    td:nth-of-type(2)
+      border-right: 2px solid #ffffff
+
+    //tr
+    //  display: flex
+    //  flex-flow: column
+
+
+.text-green
+  color: #00bf66
+
+
+

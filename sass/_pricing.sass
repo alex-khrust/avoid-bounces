@@ -1,0 +1,133 @@
+#pricing
+  .container
+    flex-flow: column
+    padding-bottom: 125px
+  .estimate
+    width: 100%
+    min-height: 421px
+    height: auto
+    border-radius: 20px
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0 7px 21px 0 rgba(82, 64, 172, 0.09)
+    h3
+      font: 40px "Bebas_Neue"
+    &__price,
+    &__cost
+      width: 587px
+      height: 421px
+      display: flex
+      flex-flow: column
+      align-items: center
+      padding: 50px 0 35px
+    &__price
+      h3
+        color: #2a3740
+    &__cost
+      background: linear-gradient( 38deg, rgb(82,64,172) 0%, rgb(148,103,210) 99%)
+      border-radius: 20px
+      color: #ffffff
+      text-align: center
+
+  .estimate__cost--subtitle
+    width: 370px
+    font: 15px 'Montserrat-Regular'
+    margin: 10px 0 35px
+
+  .estimate__cost--sum
+    width: 318px
+    height: 64px
+    background-color: rgb(255, 255, 255)
+    border-radius: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    font: 20px 'Montserrat-SemiBold'
+    color: #2a3740
+
+  .estimate__cost--total
+    font: 25px 'Bebas_Neue'
+    color: #d8beff
+    padding: 20px 0 45px
+    span
+      color: #ffffff
+
+#price__table
+  max-width: 444px
+  width: 100%
+  height: auto
+  color: #2a3740
+  border-collapse: collapse
+  margin-top: 15px
+  th
+    height: 41px
+    background-color: rgb(240, 235, 255)
+    font: bold 15px 'Montserrat-Medium'
+    padding: 0 0 0 35px
+    &:nth-of-type(1)
+      border-radius: 20px 0 0 20px
+      text-align: left
+      border-right: 2px solid #ffffff
+    &:nth-of-type(2)
+      border-radius: 0 20px 20px 0
+      text-align: left
+      padding: 0 0 0 45px
+  td
+    height: 29px
+    font: 15px 'Montserrat-Regular'
+    border-collapse: collapse
+    position: relative
+    &:nth-of-type(1)
+      padding: 0 0 0 35px
+      border-radius: 15px 0 0 15px
+    &:nth-of-type(2)
+      border-radius: 0 15px 15px 0
+      padding: 0 45px
+      font: 500 15px 'Montserrat-Regular'
+    span
+      font: bold 15px 'Montserrat-Medium'
+    svg
+      width: 15px
+      height: 15px
+      margin-left: 10px
+      position: absolute
+      bottom: 8px
+  tr:hover,
+  tr.active
+    td
+      cursor: pointer
+      background: #9966cc
+      color: #ffffff
+      transition: .3s ease-in-out
+    svg #warning
+      fill: #ffffff
+      transition: .3s ease-in-out
+
+
+
+.text-purple
+  color: #9966cc
+  font: bold 15px 'Montserrat-Medium' !important
+
+.btn-cost
+    width: 355px
+    height: 46px
+    border: 2px dashed rgb(255, 255, 255)
+    border-radius: 50px
+    font: 17px 'Montserrat-Medium'
+    color: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 40px
+    svg
+      width: 67px
+      margin-left: 25px
+    &:hover
+      background: #ffffff
+      border: 2px dashed rgb(148,103,210)
+      color: #2a3740
+      svg
+        fill: #2a3740
