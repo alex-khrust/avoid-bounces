@@ -13,22 +13,22 @@ $(document).ready(function ()  {
 //   })();
   
   // Добавление класса active пунктам меню --------------------------------
-  $('.type li a').click(function(){
-    $(".type li a").removeClass('active');
-    $(this).addClass('active');
-  });
+  // $('.type li a').click(function(){
+  //   $(".type li a").removeClass('active');
+  //   $(this).addClass('active');
+  // });
 //-------------------------------------------------------------------------
 // Переключение между табами, добавление класса active и скрытие контента ----------
-  $(".tab_content").hide();
-  $(".tab_content:first").show();
-  /* в режиме вкладок */
-  $(".block__menu a").click(function () {
-    $(".tab_content").hide();
-    var activeTab = $(this).attr("rel");
-    $("#" + activeTab).fadeIn();
-    $(".block__menu a").removeClass("active");
-    $(this).addClass("active");
-  });
+//   $(".tab_content").hide();
+//   $(".tab_content:first").show();
+//   /* в режиме вкладок */
+//   $(".block__menu a").click(function () {
+//     $(".tab_content").hide();
+//     var activeTab = $(this).attr("rel");
+//     $("#" + activeTab).fadeIn();
+//     $(".block__menu a").removeClass("active");
+//     $(this).addClass("active");
+//   });
   //---------------------------------------------------------------------
   //Кнопки ---------------------------------------------------------------
   // $("#btn-type").click(function () {
@@ -39,21 +39,21 @@ $(document).ready(function ()  {
   // });
   //----------------------------------------------------------------------
   //----------------------------------------------------------------------
-  $("#create_profile").hide();
-  /* в режиме вкладок */
-  $("#btn-create_profile").click(function () {
-    $(".tabl").hide();
-    $("#create_profile").show();
-    var activeTab = $(".block__menu a").attr("rel");
-    $("#" + activeTab).fadeIn();
-  });
-  
-  $(".btn-back_to_profiles").click(function () {
-    $("#create_profile").hide();
-    $(".tabl").show();
-    var btnPprof = $(".buttons a").attr("rel");
-    $("#" + btnProf).fadeIn();
-  });
+  // $("#create_profile").hide();
+  // /* в режиме вкладок */
+  // $("#btn-create_profile").click(function () {
+  //   $(".tabl").hide();
+  //   $("#create_profile").show();
+  //   var activeTab = $(".block__menu a").attr("rel");
+  //   $("#" + activeTab).fadeIn();
+  // });
+  //
+  // $(".btn-back_to_profiles").click(function () {
+  //   $("#create_profile").hide();
+  //   $(".tabl").show();
+  //   var btnPprof = $(".buttons a").attr("rel");
+  //   $("#" + btnProf).fadeIn();
+  // });
 //-------------------------------------------------------------------------
 //Добавление и удаление классов по ширене экрана  ----------
 //   var windowWidth = $(window).width();
@@ -66,7 +66,7 @@ $(document).ready(function ()  {
 //     else $("header").removeClass("mob-menu");
 //   });
 //----------------------------------------------------------
-  
+// Аккордион ---------------------------------------------
   $(function() {
     var items = $(".accordion__items");
     

@@ -4,19 +4,56 @@ footer.page-footer
   border-top: 1px solid rgb(240, 235, 255)
 
   .container
-    justify-content: space-between
+    flex-flow: column
+    align-items: center
     padding: 15px 0
 
   .foo-contacts
     width: 100%
-    height: auto
+    height: 100%
     display: flex
     justify-content: space-between
     align-items: center
 
     &__item
-      //width: 33%
-      //height: auto
+      height: 100%
+      display: flex
+      align-items: center
       img
-        //width: 100%
-        //height: auto
+        padding-right: 25px
+      p
+        width: 100%
+        height: auto
+        line-height: .6
+        span
+          font: 20px 'Bebas_Neue'
+          color: #d3cee1
+          line-height: .7
+        a
+          font: 600 15px 'Montserrat-Regular'
+          color: #2a3740
+          line-height: .7
+          &:hover
+            text-decoration: underline
+
+
+  .social
+    width: 100%
+    min-height: 20px
+    height: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    a
+      width: auto
+      height: auto
+      margin: 0 10px
+      display: inline-block
+      svg
+        width: auto
+        height: 20px
+        path
+          fill: #d3cee1
+      &:hover
+        svg path
+          fill: #9966cc
