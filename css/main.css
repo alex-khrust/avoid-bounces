@@ -651,10 +651,10 @@ input[type=submit] {
       border-radius: 0 0 30px 30px !important; }
       #faq .accordion__content__txt {
         padding: 23px 23px 38px 23px;
-        -webkit-transition: opacity 0.3s ease 0.6s,-webkit-transform 0.3s ease 0.6s;
-        transition: opacity 0.3s ease 0.6s,-webkit-transform 0.3s ease 0.6s;
-        transition: opacity 0.3s ease 0.6s,transform 0.3s ease 0.6s;
-        transition: opacity 0.3s ease 0.6s,transform 0.3s ease 0.6s,-webkit-transform 0.3s ease 0.6s;
+        -webkit-transition: -webkit-transform 0.3s ease 0.3s;
+        transition: -webkit-transform 0.3s ease 0.3s;
+        transition: transform 0.3s ease 0.3s;
+        transition: transform 0.3s ease 0.3s, -webkit-transform 0.3s ease 0.3s;
         -webkit-transform: scaleY(0);
         transform: scaleY(0);
         color: #a99;
