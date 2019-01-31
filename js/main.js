@@ -12,44 +12,16 @@ $(document).ready(function ()  {
 //     })
 //   })();
 // -----------------------------------------------------------------------
-// Скрипт для присвоения пункту меню класса актив ------------------------------
-  
-  $(document).on("scroll", onScroll);
-  
-  $('a[href^="#"]').on('click', function (e) {
+// Прокрутка к выбранному пункту меню ------------------------------
+  $('nav ul li a').click(function(e) {
+    
     e.preventDefault();
-    $(document).off("scroll");
     
-    $('a').each(function () {
-      $(this).removeClass('active');
-    });
-    $(this).addClass('active');
+    var menuLink = $(this).attr('href');
+    var sectionDist = $(menuLink).offset().top;
     
-    var target = this.hash;
-    $target = $(target);
-    $('html, body').stop().animate({
-      'scrollTop': $target.offset().top + 2
-    }, 500, 'swing', function () {
-      window.location.hash = target;
-      $(document).on("scroll", onScroll);
-    });
+    $('html, body').animate({scrollTop: sectionDist}, 1200);
   });
-  
-  
-  function onScroll(event) {
-    var scrollPosition = $(document).scrollTop();
-    $('nav a').each(function () {
-      var currentLink = $(this);
-      var refElement = $(currentLink.attr("href"));
-      if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-        $('nav ul li a').removeClass("active");
-        currentLink.addClass("active");
-      }
-      else {
-        currentLink.removeClass("active");
-      }
-    });
-  }
 //-----------------------------------------------------------------------
 // Добавление класса active пунктам меню --------------------------------
   // $('.type li a').click(function(){
@@ -105,6 +77,22 @@ $(document).ready(function ()  {
 //     else $("header").removeClass("mob-menu");
 //   });
 //----------------------------------------------------------
+// Слайдер slick----------------------------------------------------------
+  $('#slider-about').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    arrows: false,
+    nextArrow: '.btn-team__slider--up',
+    prevArrow: '.btn-team__slider--dawn'
+  });
+  
+  //----------------------------------------------------------
 // Аккордион ---------------------------------------------
   $(function() {
     var items = $(".accordion__items");

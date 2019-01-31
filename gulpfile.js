@@ -41,14 +41,14 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
 gulp.task('scripts', function () {
   return gulp.src([ // Берем все необходимые библиотеки
     'libs/jquery/dist/jquery.min.js', // Берем jQuery
-    // 'libs/slick/slick.min.js',
+    'libs/slick-carousel/slick/slick.min.js',
     // 'libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-    'libs/gsap/src/minified/TweenMax.min.js',
-    'libs/wow/dist/wow.min.js',
-    'libs/paroller.js/dist/jquery.paroller.js',
-    'libs/fullPage/jquery.fullpage.extensions.min.js',
-    'libs/fullPage/scrolloverflow.min.js',
-    'libs/fullPage/fullPage.js'
+    // 'libs/gsap/src/minified/TweenMax.min.js',
+    // 'libs/wow/dist/wow.min.js',
+    // 'libs/paroller.js/dist/jquery.paroller.js',
+    // 'libs/fullPage/jquery.fullpage.extensions.min.js',
+    // 'libs/fullPage/scrolloverflow.min.js',
+    // 'libs/fullPage/fullPage.js'
   ])
     .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
     .pipe(uglify()) // Сжимаем JS файл
@@ -58,11 +58,11 @@ gulp.task('scripts', function () {
 gulp.task('css-libs', ['sass'], function () {
   return gulp.src([ // Выбираем файл для минификации
     'libs/normalize.css/normalize.css',
-    'libs/wow/css/libs/animate.css',
-    'libs/fullPage/jquery.fullpage.css',
+    // 'libs/wow/css/libs/animate.css',
+    // 'libs/fullPage/jquery.fullpage.css',
     // 'libs/magnific-popup/dist/magnific-popup.css',
-    // 'libs/slick/slick.css',
-    // 'libs/slick/slick-theme.css'
+    'libs/slick-carousel/slick/slick.css',
+    'libs/slick-carousel/slick/slick-theme.css'
   ])
     .pipe(concat('libs.css'))
     .pipe(cleanCSS({ // Сжимаем
