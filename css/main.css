@@ -34,8 +34,7 @@ header, section, footer {
   display: flex;
   position: relative;
   background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important; }
+  background-position: center !important; }
 
 .btn {
   width: auto;
