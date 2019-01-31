@@ -916,8 +916,8 @@ footer.page-footer {
     width: 100%;
     height: 100%;
     z-index: 5;
-    background: linear-gradient(38deg, #5240ac 0%, #9467d2 99%);
-    opacity: 0.812;
+    background: linear-gradient(38deg, rgba(82, 64, 172, 0.8) 0%, rgba(148, 103, 210, 0.81) 99%);
+    opacity: 0;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -954,6 +954,7 @@ footer.page-footer {
   padding: 1rem;
   opacity: 0;
   overflow-y: auto;
+  z-index: 7;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -1033,16 +1034,16 @@ footer.page-footer {
   .close-modal {
     right: 20px !important; } }
 
-.affiliate .section-header {
+.modal-content .section-header {
   padding: 40px 0 40px !important; }
 
-.affiliate form#form-affiliate {
+.modal-content form#form-affiliate {
   width: 870px; }
-  .affiliate form#form-affiliate input, .affiliate form#form-affiliate option, .affiliate form#form-affiliate select {
+  .modal-content form#form-affiliate input, .modal-content form#form-affiliate option, .modal-content form#form-affiliate select {
     width: 270px;
     height: 50px; }
-  .affiliate form#form-affiliate textarea {
+  .modal-content form#form-affiliate textarea {
     width: 100%;
     height: 134px; }
-  .affiliate form#form-affiliate .btn {
+  .modal-content form#form-affiliate .btn {
     padding: 0; }

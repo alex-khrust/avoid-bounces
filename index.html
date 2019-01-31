@@ -24,12 +24,12 @@
         <ul id="menu-nav">
           <li><a href="#features">Features</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="javascript:void(0)" id="for-affiliate">Affiliate</a></li>
+          <li><a href="javascript:void(0)" id="affiliate">Affiliate</a></li>
           <li><a href="#contact">Contact us</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li class="vert-line"></li>
-          <li><a href="">Login</a></li>
-          <li><a class="active" href="">Registration</a></li>
+          <li><a href="javascript:void(0)" id="login">Login</a></li>
+          <li><a class="active" href="javascript:void(0)" id="registration">Registration</a></li>
         </ul>
       </nav>
     </div>
@@ -349,7 +349,7 @@
     </div>
   </footer>
 
-  <div class="modal-overlay">
+  <div class="modal-overlay affiliate">
     <div class="modal">
     
       <a class="close-modal">
@@ -358,7 +358,7 @@
         </svg>
       </a><!-- close modal -->
     
-      <div class="modal-content affiliate">
+      <div class="modal-content">
         <div class="section-header">
           <h2>Affiliate</h2>
           <p>Fill out a short form and we will contact you and help you figure it out.</p>
@@ -367,9 +367,68 @@
           <p>
             <input type="text" placeholder="First Name" name="first_name" required>
             <input type="email" placeholder="Email" name="email" required>
-            <select name="" id=""></select>
+            <select name="service">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </p>
           <textarea name="question" placeholder="Ask a question" cols="30" rows="10"></textarea>
+          <input type="submit" class="btn" value="Send">
+        </form>
+      </div><!-- content -->
+
+    </div><!-- modal -->
+  </div><!-- overlay -->
+  
+  <div class="modal-overlay login">
+    <div class="modal">
+    
+      <a class="close-modal">
+        <svg viewBox="0 0 20 20">
+          <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+        </svg>
+      </a><!-- close modal -->
+    
+      <div class="modal-content login">
+        <div class="section-header">
+          <h2>Login</h2>
+          <p>Enter your login information</p>
+        </div>
+        <form action="" id="form-login" method="post">
+          <p>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="First Name" name="first_name" required>
+          </p>
+          <input type="submit" class="btn" value="Send">
+        </form>
+      </div><!-- content -->
+  
+    </div><!-- modal -->
+  </div><!-- overlay -->
+  
+  <div class="modal-overlay registration">
+    <div class="modal">
+    
+      <a class="close-modal">
+        <svg viewBox="0 0 20 20">
+          <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+        </svg>
+      </a><!-- close modal -->
+    
+      <div class="modal-content registration">
+        <div class="section-header">
+          <h2>Registration</h2>
+          <p>Fill out a short form and we will contact you and help you figure it out.</p>
+        </div>
+        <form action="" id="form-registration" method="post">
+          <p>
+            <input type="text" placeholder="First Name" name="first_name" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+          </p>
           <input type="submit" class="btn" value="Send">
         </form>
       </div><!-- content -->

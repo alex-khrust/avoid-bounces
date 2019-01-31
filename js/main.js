@@ -13,14 +13,34 @@ $(document).ready(function ()  {
 //   })();
 // -----------------------------------------------------------------------
   // popup ---------------------------------------------
-  var elements = $('.modal-overlay, .modal');
+  var elements1 = $('.affiliate, .affiliate>.modal');
   
-  $('#for-affiliate').click(function(){
-    elements.addClass('active');
+  $('#affiliate').click(function(){
+    elements1.addClass('active');
   });
   
   $('.close-modal').click(function(){
-    elements.removeClass('active');
+    elements1.removeClass('active');
+  });
+  //-------
+  var elements2 = $('.login, .login>.modal');
+  
+  $('#login').click(function(){
+    elements2.addClass('active');
+  });
+  
+  $('.close-modal').click(function(){
+    elements2.removeClass('active');
+  });
+  //-------
+  var elements3 = $('.registration, .registration>.modal');
+  
+  $('#registration').click(function(){
+    elements3.addClass('active');
+  });
+  
+  $('.close-modal').click(function(){
+    elements3.removeClass('active');
   });
   //----------------------------------------------------------
 // Прокрутка к выбранному пункту меню ------------------------------
