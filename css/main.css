@@ -1033,6 +1033,9 @@ footer.page-footer {
   .close-modal {
     right: 20px !important; } }
 
+.affiliate .section-header {
+  padding: 40px 0 40px !important; }
+
 .affiliate form#form-affiliate {
   width: 870px; }
   .affiliate form#form-affiliate input, .affiliate form#form-affiliate option, .affiliate form#form-affiliate select {
@@ -1041,3 +1044,5 @@ footer.page-footer {
   .affiliate form#form-affiliate textarea {
     width: 100%;
     height: 134px; }
+  .affiliate form#form-affiliate .btn {
+    padding: 0; }
