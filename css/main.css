@@ -747,7 +747,7 @@ input[type=submit] {
     -ms-flex-flow: column;
     flex-flow: column; }
 
-form#form-contact_us, form#form-affiliate {
+form#form-contact_us, form {
   max-width: 970px;
   width: 100%;
   height: auto;
@@ -762,7 +762,7 @@ form#form-contact_us, form#form-affiliate {
   -ms-flex-align: center;
   align-items: center;
   margin: 0 auto; }
-  form#form-contact_us p, form#form-affiliate p {
+  form#form-contact_us p, form p {
     width: 100%;
     height: auto;
     display: -webkit-box;
@@ -774,7 +774,7 @@ form#form-contact_us, form#form-affiliate {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    form#form-contact_us p input, form#form-contact_us p select, form#form-affiliate p input, form#form-affiliate p select {
+    form#form-contact_us p input, form#form-contact_us p select, form p input, form p select {
       max-width: 470px;
       width: 100%;
       height: 50px;
@@ -784,15 +784,15 @@ form#form-contact_us, form#form-affiliate {
       padding: 0 40px;
       margin-bottom: 20px;
       color: #2a3740; }
-      form#form-contact_us p input::-webkit-input-placeholder, form#form-contact_us p select::-webkit-input-placeholder, form#form-affiliate p input::-webkit-input-placeholder, form#form-affiliate p select::-webkit-input-placeholder {
+      form#form-contact_us p input::-webkit-input-placeholder, form#form-contact_us p select::-webkit-input-placeholder, form p input::-webkit-input-placeholder, form p select::-webkit-input-placeholder {
         font: 15px 'Montserrat-Regular'; }
-      form#form-contact_us p input:-ms-input-placeholder, form#form-contact_us p select:-ms-input-placeholder, form#form-affiliate p input:-ms-input-placeholder, form#form-affiliate p select:-ms-input-placeholder {
+      form#form-contact_us p input:-ms-input-placeholder, form#form-contact_us p select:-ms-input-placeholder, form p input:-ms-input-placeholder, form p select:-ms-input-placeholder {
         font: 15px 'Montserrat-Regular'; }
-      form#form-contact_us p input::-ms-input-placeholder, form#form-contact_us p select::-ms-input-placeholder, form#form-affiliate p input::-ms-input-placeholder, form#form-affiliate p select::-ms-input-placeholder {
+      form#form-contact_us p input::-ms-input-placeholder, form#form-contact_us p select::-ms-input-placeholder, form p input::-ms-input-placeholder, form p select::-ms-input-placeholder {
         font: 15px 'Montserrat-Regular'; }
-      form#form-contact_us p input::placeholder, form#form-contact_us p select::placeholder, form#form-affiliate p input::placeholder, form#form-affiliate p select::placeholder {
+      form#form-contact_us p input::placeholder, form#form-contact_us p select::placeholder, form p input::placeholder, form p select::placeholder {
         font: 15px 'Montserrat-Regular'; }
-  form#form-contact_us textarea, form#form-affiliate textarea {
+  form#form-contact_us textarea, form textarea {
     max-width: 970px;
     width: 100%;
     height: 134px;
@@ -802,15 +802,15 @@ form#form-contact_us, form#form-affiliate {
     padding: 25px 40px;
     margin-bottom: 30px;
     color: #2a3740; }
-    form#form-contact_us textarea::-webkit-input-placeholder, form#form-affiliate textarea::-webkit-input-placeholder {
+    form#form-contact_us textarea::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
       font: 15px 'Montserrat-Regular'; }
-    form#form-contact_us textarea:-ms-input-placeholder, form#form-affiliate textarea:-ms-input-placeholder {
+    form#form-contact_us textarea:-ms-input-placeholder, form textarea:-ms-input-placeholder {
       font: 15px 'Montserrat-Regular'; }
-    form#form-contact_us textarea::-ms-input-placeholder, form#form-affiliate textarea::-ms-input-placeholder {
+    form#form-contact_us textarea::-ms-input-placeholder, form textarea::-ms-input-placeholder {
       font: 15px 'Montserrat-Regular'; }
-    form#form-contact_us textarea::placeholder, form#form-affiliate textarea::placeholder {
+    form#form-contact_us textarea::placeholder, form textarea::placeholder {
       font: 15px 'Montserrat-Regular'; }
-  form#form-contact_us .btn, form#form-affiliate .btn {
+  form#form-contact_us .btn, form .btn {
     max-width: 270px;
     width: 100%; }
 
@@ -1034,16 +1034,82 @@ footer.page-footer {
   .close-modal {
     right: 20px !important; } }
 
-.modal-content .section-header {
-  padding: 40px 0 40px !important; }
-
-.modal-content form#form-affiliate {
-  width: 870px; }
-  .modal-content form#form-affiliate input, .modal-content form#form-affiliate option, .modal-content form#form-affiliate select {
+.modal-content {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+  .modal-content .section-header {
+    padding: 40px 0 40px !important; }
+  .modal-content form#form-affiliate {
+    width: 870px; }
+  .modal-content input, .modal-content select {
     width: 270px;
     height: 50px; }
-  .modal-content form#form-affiliate textarea {
+  .modal-content textarea {
     width: 100%;
     height: 134px; }
-  .modal-content form#form-affiliate .btn {
+  .modal-content .btn {
     padding: 0; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: 15px 'Montserrat-Regular' !important; }
+
+.select {
+  height: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block; }
+  .select:after {
+    content: '';
+    position: absolute;
+    top: 22.5px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid #bbb8ca;
+    border-bottom: 2px solid #bbb8ca; }
+
+select > .placeholder {
+  display: none; }
+
+.login .modal,
+.registration .modal {
+  width: 434px;
+  height: 596px; }
+
+.login .modal-content,
+.registration .modal-content {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+  .login .modal-content .section-header h2,
+  .registration .modal-content .section-header h2 {
+    padding-bottom: 5px; }
+  .login .modal-content p,
+  .registration .modal-content p {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column; }
+  .login .modal-content input,
+  .registration .modal-content input {
+    margin-bottom: 20px; }
+  .login .modal-content .btn,
+  .registration .modal-content .btn {
+    width: 200px;
+    height: 60px;
+    margin-top: 60px; }
+
+.login .section-header {
+  padding: 100px 0 65px !important; }
+
+.registration .section-header {
+  padding: 100px 0 35px !important; }
+
+.registration .btn {
+  margin-top: 15px !important; }

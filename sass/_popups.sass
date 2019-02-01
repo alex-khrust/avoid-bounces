@@ -1,15 +1,73 @@
 .modal-content
+  justify-content: flex-start
   .section-header
+    //justify-content: flex-start !important
     padding: 40px 0 40px !important
 
   form#form-affiliate
     width: 870px
-    input, option, select
-      width: 270px
-      height: 50px
-    textarea
-      width: 100%
-      height: 134px
+  input, select
+    width: 270px
+    height: 50px
+  textarea
+    width: 100%
+    height: 134px
 
+  .btn
+    padding: 0
+
+select
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  font: 15px 'Montserrat-Regular' !important
+.select
+  height: 50px
+  margin-bottom: 20px
+  position: relative
+  display: inline-block
+  &:after
+    content: ''
+    position: absolute
+    top: 22.5px
+    right: 25px
+    width: 10px
+    height: 10px
+    transform: translateY(-50%) rotate(45deg)
+    border-right: 2px solid #bbb8ca
+    border-bottom: 2px solid #bbb8ca
+
+select > .placeholder
+  display: none
+
+
+.login,
+.registration
+  .modal
+    width: 434px
+    height: 596px
+  .modal-content
+    justify-content: flex-start
+    .section-header
+      h2
+        padding-bottom: 5px
+
+    p
+      flex-flow: column
+    input
+      margin-bottom: 20px
     .btn
-      padding: 0
+      width: 200px
+      height: 60px
+      margin-top: 60px
+
+.login
+  .section-header
+    padding: 100px 0 65px !important
+.registration
+  .section-header
+    padding: 100px 0 35px !important
+  //input
+  //  margin-bottom: 20px !important
+  .btn
+    margin-top: 15px !important
