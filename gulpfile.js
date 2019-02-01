@@ -62,7 +62,8 @@ gulp.task('css-libs', ['sass'], function () {
     // 'libs/fullPage/jquery.fullpage.css',
     // 'libs/magnific-popup/dist/magnific-popup.css',
     'libs/slick-carousel/slick/slick.css',
-    'libs/slick-carousel/slick/slick-theme.css'
+    'libs/slick-carousel/slick/slick-theme.css',
+    // 'css/critical.css'
   ])
     .pipe(concat('libs.css'))
     .pipe(cleanCSS({ // Сжимаем
@@ -75,7 +76,7 @@ gulp.task('css-libs', ['sass'], function () {
 
 gulp.task('gulp-clean-css', ['sass'], function () {
   return gulp.src([ // Выбираем файл для минификации
-    'css/main.css',
+    'css/main.css'
   ])
     .pipe(cleanCSS({ // Сжимаем
       level: 2
