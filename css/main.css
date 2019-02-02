@@ -39,7 +39,6 @@ header, section, footer {
 .btn {
   width: auto;
   background-color: #8d63ce;
-  padding: 20px 80px;
   border-radius: 50px;
   overflow: hidden;
   font: 17px 'Montserrat-Medium';
@@ -812,7 +811,8 @@ form#form-contact_us, form {
       font: 15px 'Montserrat-Regular'; }
   form#form-contact_us .btn, form .btn {
     max-width: 270px;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 
 footer.page-footer {
   min-height: 130px;
