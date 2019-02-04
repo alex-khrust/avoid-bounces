@@ -7,7 +7,7 @@
   position: absolute
   top: 0
   padding: 15px 0
-  z-index: 1
+  z-index: 100
 
   .container
     justify-content: space-between
@@ -59,10 +59,28 @@
       background: #ffffff
 
 
+.mob-menu nav.open
+  display: flex
+  position: absolute
+  ul
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    padding-top: 80px
+    flex-flow: column
+    background: linear-gradient( 38deg, rgba(84, 65, 173, 0.95) 0%, rgba(148, 103, 210, 0.95) 99%)
+    z-index: -99
+    .vert-line
+      height: 2px
+      width: 50%
+
+
 .hamburger
   position: absolute
   right: 2%
-  top: 12px
+  top: 13px
   //left: 50%
   //transform: translate(-50%, -50%)
   display: none

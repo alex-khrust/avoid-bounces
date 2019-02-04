@@ -7,6 +7,10 @@ $(document).ready(function ()  {
 //       $('.hamburger-menu').toggleClass('down');
 //     })
 //   })();
+  $('.hamburger').click(function() {
+    $(this).toggleClass('active');
+    $('nav').toggleClass('open');
+  });
 // -----------------------------------------------------------------------
   // popup ---------------------------------------------
   var elements1 = $('.affiliate, .affiliate>.modal');
@@ -51,10 +55,12 @@ $(document).ready(function ()  {
   });
 //-----------------------------------------------------------------------
 // Добавление класса active пунктам меню --------------------------------
-  // $('.type li a').click(function(){
-  //   $(".type li a").removeClass('active');
-  //   $(this).addClass('active');
-  // });
+  $('nav ul li a').click(function(){
+    $("nav ul li a").removeClass('active');
+    $(this).addClass('active');
+    $('nav').removeClass('open');
+    $('.hamburger').toggleClass('active');
+  });
 //-------------------------------------------------------------------------
 // Переключение между табами, добавление класса active и скрытие контента ----------
 //   $(".tab_content").hide();
@@ -102,10 +108,6 @@ $(document).ready(function ()  {
     var windowWidth = $(window).width();
     if (windowWidth < 1170) $("header.page-header").addClass("mob-menu");
     else $("header.page-header").removeClass("mob-menu");
-  });
-  
-  $('.hamburger').click(function() {
-    $(this).toggleClass('active');
   });
 //----------------------------------------------------------
 // Слайдер slick----------------------------------------------------------
