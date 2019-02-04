@@ -12,6 +12,7 @@
   .container
     justify-content: space-between
     align-items: center
+    overflow: visible
 
   a
     color: #ffffff
@@ -59,31 +60,33 @@
 
 
 .hamburger
-  position: relative
-  right: 0
-  //top: 50%
+  position: absolute
+  right: 2%
+  top: 12px
   //left: 50%
   //transform: translate(-50%, -50%)
   display: none
 
 .hamburger span
   display: block
-  width: 50px
-  height: 6px
+  width: 45px
+  height: 5px
   background-color: #fff
+  border-radius: 2.5px
   margin-bottom: 8px
   box-shadow: 0 1px 2px rgba(0,0,0, .2)
   transition: .5s
+  padding: -5px 0
 
 .hamburger.active span:nth-child(2)
-  transform: translateX(-50px)
+  transform: translateX(-45px)
   opacity: 0
 
 .hamburger.active span:nth-child(1)
-  transform: rotateY(180deg) rotateZ(45deg) translate(10px, 10px)
+  transform: rotateY(180deg) rotateZ(45deg) translate(9px, 9px)
 
 .hamburger.active span:nth-child(3)
-  transform: rotateY(180deg) rotateZ(-45deg) translate(10px, -10px)
+  transform: rotateY(180deg) rotateZ(-45deg) translate(9px, -9px)
 
 .hamburger p
   display: block
@@ -96,6 +99,7 @@
   font-family: sans-serif
   font-weight: bold
   color: #fff
+  border-radius: 6px
   background-color: #9966cc
   box-shadow: 0 1px 2px rgba(0,0,0, .2)
   backface-visibility: hidden
@@ -110,4 +114,4 @@
 .hamburger.active p.close
   transform: rotateY(0deg)
   background-color: #fff
-  color: #f43684
+  color: #9966cc

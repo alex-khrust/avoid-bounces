@@ -122,7 +122,8 @@ input[type=submit] {
     justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    overflow: visible; }
   .page-header a {
     color: #ffffff; }
   .page-header .logo {
@@ -187,33 +188,36 @@ input[type=submit] {
       background: #ffffff; }
 
 .hamburger {
-  position: relative;
-  right: 0;
+  position: absolute;
+  right: 2%;
+  top: 12px;
   display: none; }
 
 .hamburger span {
   display: block;
-  width: 50px;
-  height: 6px;
+  width: 45px;
+  height: 5px;
   background-color: #fff;
+  border-radius: 2.5px;
   margin-bottom: 8px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  padding: -5px 0; }
 
 .hamburger.active span:nth-child(2) {
-  -webkit-transform: translateX(-50px);
-  transform: translateX(-50px);
+  -webkit-transform: translateX(-45px);
+  transform: translateX(-45px);
   opacity: 0; }
 
 .hamburger.active span:nth-child(1) {
-  -webkit-transform: rotateY(180deg) rotateZ(45deg) translate(10px, 10px);
-  transform: rotateY(180deg) rotateZ(45deg) translate(10px, 10px); }
+  -webkit-transform: rotateY(180deg) rotateZ(45deg) translate(9px, 9px);
+  transform: rotateY(180deg) rotateZ(45deg) translate(9px, 9px); }
 
 .hamburger.active span:nth-child(3) {
-  -webkit-transform: rotateY(180deg) rotateZ(-45deg) translate(10px, -10px);
-  transform: rotateY(180deg) rotateZ(-45deg) translate(10px, -10px); }
+  -webkit-transform: rotateY(180deg) rotateZ(-45deg) translate(9px, -9px);
+  transform: rotateY(180deg) rotateZ(-45deg) translate(9px, -9px); }
 
 .hamburger p {
   display: block;
@@ -226,6 +230,7 @@ input[type=submit] {
   font-family: sans-serif;
   font-weight: bold;
   color: #fff;
+  border-radius: 6px;
   background-color: #9966cc;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -246,7 +251,7 @@ input[type=submit] {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   background-color: #fff;
-  color: #f43684; }
+  color: #9966cc; }
 
 #about {
   width: 100%;
