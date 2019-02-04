@@ -2,15 +2,15 @@ $(document).ready(function ()  {
 // =======================================================================
 // Hamburger -----------------------------------------
 //   (function () {
-//     $('#search-hamburger').on('click', function() {
-//       $('#search-hamburger>.bar').toggleClass('animate');
-//       $('.hamburger-menu').toggleClass('down');
-//     });
 //     $('.hamburger-menu a').on('click', function() {
 //       $('#search-hamburger>.bar').toggleClass('animate');
 //       $('.hamburger-menu').toggleClass('down');
 //     })
 //   })();
+  $('.hamburger').click(function() {
+    $(this).toggleClass('active');
+    $('nav').toggleClass('open');
+  });
 // -----------------------------------------------------------------------
   // popup ---------------------------------------------
   var elements1 = $('.affiliate, .affiliate>.modal');
@@ -55,10 +55,12 @@ $(document).ready(function ()  {
   });
 //-----------------------------------------------------------------------
 // Добавление класса active пунктам меню --------------------------------
-  // $('.type li a').click(function(){
-  //   $(".type li a").removeClass('active');
-  //   $(this).addClass('active');
-  // });
+  $('nav ul li a').click(function(){
+    $("nav ul li a").removeClass('active');
+    $(this).addClass('active');
+    $('nav').removeClass('open');
+    $('.hamburger').toggleClass('active');
+  });
 //-------------------------------------------------------------------------
 // Переключение между табами, добавление класса active и скрытие контента ----------
 //   $(".tab_content").hide();
@@ -98,15 +100,15 @@ $(document).ready(function ()  {
   // });
 //-------------------------------------------------------------------------
 //Добавление и удаление классов по ширене экрана  ----------
-//   var windowWidth = $(window).width();
-//   if (windowWidth < 1070) $("header").addClass("mob-menu");
-//   else $("header").removeClass("mob-menu");
-//
-//   $(window).resize(function () {
-//     var windowWidth = $(window).width();
-//     if (windowWidth < 1070) $("header").addClass("mob-menu");
-//     else $("header").removeClass("mob-menu");
-//   });
+  var windowWidth = $(window).width();
+  if (windowWidth < 1170) $("header.page-header").addClass("mob-menu");
+  else $("header.page-header").removeClass("mob-menu");
+
+  $(window).resize(function () {
+    var windowWidth = $(window).width();
+    if (windowWidth < 1170) $("header.page-header").addClass("mob-menu");
+    else $("header.page-header").removeClass("mob-menu");
+  });
 //----------------------------------------------------------
 // Слайдер slick----------------------------------------------------------
   $('#slider-about').slick({
@@ -121,6 +123,69 @@ $(document).ready(function ()  {
     arrows: false,
     nextArrow: '.btn-team__slider--up',
     prevArrow: '.btn-team__slider--dawn'
+  });
+  // Инициализация слайдера при загрузке страницы, по ширене экрана меньше 1170 px  ----------
+  var windowWidth = $(window).width();
+  if (windowWidth < 1170) $('.features-list').slick({
+      autoplay: true,
+      infinite: true,
+      adaptiveHeight: true,
+      focusOnSelect: false,
+      dots: true,
+      autoplaySpeed: 3000,
+      responsive: [{
+          breakpoint: 1170,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },{
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },{
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          },
+      }]
+    });
+  else $('.features-list').slick('unslick');
+  
+  // Инициализация слайдера при ресайзе ширены экрана  ----------
+  $(window).resize(function () {
+    var windowWidth = $(window).width();
+    if (windowWidth < 1170) $('.features-list').slick({
+      autoplay: true,
+      infinite: true,
+      adaptiveHeight: true,
+      focusOnSelect: false,
+      dots: true,
+      autoplaySpeed: 3000,
+      responsive: [{
+        breakpoint: 1170,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },{
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },{
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        },
+      }]
+    });
+    else $('.features-list').slick('unslick');
   });
   
   //----------------------------------------------------------
