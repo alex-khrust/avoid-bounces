@@ -1358,13 +1358,29 @@ select > .placeholder {
       -ms-flex-order: 3;
       order: 3; }
   .modal-overlay {
+    width: 100%;
+    height: 100%;
     z-index: 101; }
     .modal-overlay .modal {
       width: 100%;
       height: 100%;
-      border-radius: 0; }
+      border-radius: 0;
+      z-index: 100;
+      padding: 0 2% !important; }
     .modal-overlay form p {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-flow: column;
-      flex-flow: column; } }
+      flex-flow: column; }
+      .modal-overlay form p input, .modal-overlay form p .select, .modal-overlay form p select, .modal-overlay form p textarea {
+        max-width: 470px !important;
+        width: 100%; }
+    .modal-overlay form textarea {
+      max-width: 470px;
+      width: 100%; }
+  .affiliate .section-header {
+    padding: 20px 0 20px !important; }
+    .affiliate .section-header:before {
+      top: 40px; }
+  .affiliate input {
+    margin-bottom: 10px; } }
