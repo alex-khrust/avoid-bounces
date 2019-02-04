@@ -1,5 +1,6 @@
 #faq
-  height: 850px
+  min-height: 850px
+  height: auto
   background: url("../img/faq-background.png")
   padding-bottom: 160px
   .container
@@ -12,20 +13,22 @@
       background: #ffffff
 
   .accordion
-    width: 570px
+    max-width: 570px
+    width: 100%
     height: auto
     display: flex
     flex-flow: column
     margin-top: 20px
     &__items, h3
       width: 100%
-      height: 60px
+      min-height: 60px
+      height: auto
       display: flex
       justify-content: flex-start
       align-items: center
       background-color: rgb(255, 255, 255)
       border-radius: 30px
-      padding: 0 38px
+      padding: 20px 80px 20px 38px
       margin-top: 15px
       font: bold 17px 'Montserrat'
       color: rgb(97, 73, 181)
@@ -64,8 +67,8 @@
       opacity: 0
       border-radius: 0 0 30px 30px !important
       &__txt
-        padding: 23px 23px 38px 23px
         transition: transform 0.3s ease 0.3s
+        padding: 23px 23px 38px 23px
         transform: scaleY(0)
         color: #a99
         opacity: 0
@@ -75,4 +78,5 @@
         .accordion__content__txt
           opacity: 1
           transform: scaleY(1)
+
 

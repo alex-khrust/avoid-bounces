@@ -16,8 +16,10 @@
       font: 40px "Bebas_Neue"
     &__price,
     &__cost
-      width: 587px
-      height: 421px
+      max-width: 587px
+      width: 100%
+      min-height: 421px
+      height: 100%
       display: flex
       flex-flow: column
       align-items: center
@@ -32,13 +34,16 @@
       text-align: center
 
   .estimate__cost--subtitle
-    width: 370px
+    max-width: 370px
+    width: 100%
     font: 15px 'Montserrat-Regular'
     margin: 10px 0 35px
 
   .estimate__cost--sum
-    width: 318px
-    height: 64px
+    max-width: 318px
+    width: 100%
+    min-height: 64px
+    height: auto
     background-color: rgb(255, 255, 255)
     border-radius: 32px
     display: flex
@@ -112,8 +117,10 @@
   font: bold 15px 'Montserrat-Medium' !important
 
 .btn-cost
-  width: 355px
-  height: 46px
+  max-width: 355px
+  width: 100%
+  min-height: 46px
+  height: auto
   border: 2px dashed rgb(255, 255, 255)
   border-radius: 50px
   font: 17px 'Montserrat-Medium'

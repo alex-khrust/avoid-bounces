@@ -1,0 +1,114 @@
+@media (max-width: 1170px)
+  .container
+    padding: 0 2%
+
+
+
+
+  // header ---------------------
+  .mob-menu
+    position: fixed
+    background: linear-gradient( 38deg, rgba(84, 65, 173, 0.8) 0%, rgba(148, 103, 210, 0.81) 99%)
+    nav
+      display: none
+    .hamburger
+      display: block
+
+  // about ----------------------
+  #about
+    h1
+      font-size: 55px
+      width: 100%
+    p
+      text-shadow: 0 0 10px #000000
+    #slider-about
+      .slide
+        background-size: contain
+
+  // check ----------------------
+  #check
+    #validation-checker__table
+      tr
+        min-width: 280px
+        width: 100%
+        height: auto
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        &:nth-of-type(2)
+          border-top: 2px solid #ffffff
+          border-bottom: 2px solid #ffffff
+        th
+          width: 50%
+          height: 49px
+          display: flex
+          align-items: center
+          padding: 0 0 0 20px
+        td
+          width: 50%
+          height: 49px
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          padding: 0 20px 0 0
+        th:nth-of-type(2)
+          border-left: none
+        td:nth-of-type(2)
+          border-right: none
+
+  // features -------------------
+  #features
+    .features-list
+      max-height: 1950px
+      height: auto
+      &__item
+        max-width: 600px
+        margin: 0 10px
+
+  // pricing --------------------
+  #pricing
+    .container
+      align-items: center
+    .estimate
+      max-width: 587px
+      flex-flow: column
+      align-items: center
+      &__cost
+        order: 2
+        padding: 50px 20px 35px
+      &__price
+        order: 1
+
+  // faq ------------------------
+  #faq
+    background-position: right
+    background-size: cover
+    .container
+      align-items: center
+    .section-header
+      text-align: center
+
+  // contact --------------------
+  #contact
+    form
+      max-width: 570px
+      p
+        flex-flow: column
+        input
+          max-width: 600px !important
+
+  // footer ----------------------
+  footer.page-footer
+    .foo-contacts
+      flex-flow: column
+      margin-bottom: 20px
+      .foo-contacts__item
+        padding: 5px 2%
+        p a
+          line-height: 1
+      .phone
+        order: 1
+      .email
+        order: 2
+      .address
+        order: 3
