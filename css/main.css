@@ -753,8 +753,7 @@ input[type=submit] {
 #faq {
   min-height: 850px;
   height: auto;
-  background: url("../img/faq-background.png");
-  padding-bottom: 160px; }
+  background: url("../img/faq-background.png"); }
   #faq .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
