@@ -35,7 +35,8 @@ header, section, footer {
   display: flex;
   position: relative;
   background-repeat: no-repeat !important;
-  background-position: center !important; }
+  background-position: center !important;
+  overflow: hidden; }
 
 .btn {
   max-width: 270px;

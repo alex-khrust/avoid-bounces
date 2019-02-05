@@ -50,6 +50,8 @@ $(document).ready(function ()  {
     
     var menuLink = $(this).attr('href');
     var sectionDist = $(menuLink).offset().top;
+    var header = $("header").outerHeight(true);
+    var sectionDist = $(menuLink).offset().top-header;
     
     $('html, body').animate({scrollTop: sectionDist}, 1200);
   });
@@ -124,7 +126,7 @@ $(document).ready(function ()  {
     nextArrow: '.btn-team__slider--up',
     prevArrow: '.btn-team__slider--dawn'
   });
-  // Инициализация слайдера при загрузке страницы, по ширене экрана меньше 1170 px  ----------
+  // Инициализация слайдера при загрузке страницы, по ширене экрана меньше 1170px  ----------
   var windowWidth = $(window).width();
   if (windowWidth < 1170) $('.features-list').slick({
       autoplay: true,
