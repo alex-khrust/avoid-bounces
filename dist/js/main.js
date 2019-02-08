@@ -50,6 +50,8 @@ $(document).ready(function ()  {
     
     var menuLink = $(this).attr('href');
     var sectionDist = $(menuLink).offset().top;
+    var header = $("header").outerHeight(true);
+    var sectionDist = $(menuLink).offset().top-header;
     
     $('html, body').animate({scrollTop: sectionDist}, 1200);
   });
@@ -124,7 +126,7 @@ $(document).ready(function ()  {
     nextArrow: '.btn-team__slider--up',
     prevArrow: '.btn-team__slider--dawn'
   });
-  // Инициализация слайдера при загрузке страницы, по ширене экрана меньше 1170 px  ----------
+  // Инициализация слайдера при загрузке страницы, по ширене экрана меньше 1170px  ----------
   var windowWidth = $(window).width();
   if (windowWidth < 1170) $('.features-list').slick({
       autoplay: true,
@@ -192,7 +194,7 @@ $(document).ready(function ()  {
 // Аккордион ---------------------------------------------
   $(function() {
     var items = $(".accordion__items");
-    
+
     items.on("click",function(){
       if($(this).hasClass("active")) {
         // $(this).removeClass("active");
@@ -201,6 +203,24 @@ $(document).ready(function ()  {
         $(this).siblings().removeClass("active");
         $(this).next().siblings().removeClass("open");
         $(this).toggleClass("active");
+        $(this).next().toggleClass("open");
+      }
+    });
+  });
+  //--------------------------------------------------------------------------
+  // Аккордион в таблице --------------------------------------
+  $(function() {
+    var head = $(".page2__table .head");
+    var btn = $('.page2__table .head .btn');
+
+    head.on("click",function(){
+      if($(this).find(btn).hasClass("active")) {
+        $(this).find(btn).removeClass("active");
+        $(this).next().removeClass("open");
+      } else {
+        $(this).find(btn).siblings().removeClass("active");
+        $(this).next().siblings().removeClass("open");
+        $(this).find(btn).toggleClass("active");
         $(this).next().toggleClass("open");
       }
     });

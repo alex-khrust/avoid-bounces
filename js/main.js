@@ -194,7 +194,7 @@ $(document).ready(function ()  {
 // Аккордион ---------------------------------------------
   $(function() {
     var items = $(".accordion__items");
-    
+
     items.on("click",function(){
       if($(this).hasClass("active")) {
         // $(this).removeClass("active");
@@ -203,6 +203,24 @@ $(document).ready(function ()  {
         $(this).siblings().removeClass("active");
         $(this).next().siblings().removeClass("open");
         $(this).toggleClass("active");
+        $(this).next().toggleClass("open");
+      }
+    });
+  });
+  //--------------------------------------------------------------------------
+  // Аккордион в таблице --------------------------------------
+  $(function() {
+    var head = $(".page2__table .head");
+    var btn = $('.page2__table .head .btn');
+
+    head.on("click",function(){
+      if($(this).find(btn).hasClass("active")) {
+        $(this).find(btn).removeClass("active");
+        $(this).next().removeClass("open");
+      } else {
+        $(this).find(btn).siblings().removeClass("active");
+        $(this).next().siblings().removeClass("open");
+        $(this).find(btn).toggleClass("active");
         $(this).next().toggleClass("open");
       }
     });
